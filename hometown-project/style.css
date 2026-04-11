@@ -7,17 +7,25 @@ body{
 }
 .hero{
     text-align: center;
-    background-image: url("./images/Sabarmati-Riverfront-Banner.jpg");
+    background-image: url("./images/Sidi-Saiyyed-Ni-Jaali.jpg");
     background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 500px;
 }
 
 h1, h2, h3{
-    text-shadow: 0px 0px 10px white;
+    text-shadow: 0px 0px 20px white;
     margin-top: 0px;
+    padding:100px auto 50px;
 }
 
+a{
+    color: #75F4F4;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0px 0px 20px black;
+}
 h2{
     text-align: center;
 }
@@ -41,18 +49,55 @@ img{
     border-radius: 50%;
 }
 
+.heritage{
+    background-image: url("./images/heritage.jpg");
+    
+}
+
+.heritage:hover{
+    background-image: url("./images/Historical-Places-in-Ahmedabad_600.jpg");
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;}
+
+.food{
+    background-image: url("./images/cultural-cuisine.jpg");
+}
+
+.food:hover{
+    background-image: url("./images/Best\ Street\ Food\ in\ Ahmedabad.jpg");
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.culture{
+    background-image: url("./images/vector-illustration-indian-dancers-traditional-costume-dancing-garba-dandiya-colorful-background-navratri-festival-dance-389605548.webp");
+}  
+
+.culture:hover{
+    background-image: url("./images/traditional-garba-dance-dress.jpg");
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+.activity-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+}
+
 .card-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
 }
 
 .card{
     background-color: #71B48D;
     border-bottom: 10px solid #404E7C;
+    padding: 20px;
 }
 #profile-pic{
     width: 150px;
