@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Random Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">
+            Generate a 
+            <span class="subString">
+                <br \>
+                random password
+            </span>
+        </h1> 
+        <p class="addedText">Never use and insecure password again!</p>
+        <input type="number" class="input" id="input-number" placeholder="Enter password length (8-16)" min="8" max="16" required>
+        <button class="generateBtn" id="generate-btn" onclick="generatePassword()">Generate Password</button>
+        <div class="password-container">
+            <p class="display password" id="first-password"></p>
+            <p class="display secondrypassword" id="second-password"></p>       
+        </div>
+        
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
