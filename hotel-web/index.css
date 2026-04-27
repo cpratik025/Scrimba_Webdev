@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+nav{
+    background-color: #282828;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 25px;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 18px;
+    color: whitesmoke;
+    
+}
+
+.icon{
+    width: 25px;
+}
+
+.align-right{
+    margin: 0 0 auto auto;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 400;
+    margin: 25px 30px;
+}
+
+.item{
+    position: relative;
+}
+
+.item-img{
+    width: 100%;
+    display: block;
+}
+
+.img-banner{
+    background-color: #cd6858;
+    padding: 10px;
+    color: whitesmoke;
+    position:absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.caption{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+button{
+    font-weight: 700;
+    color: whitesmoke;
+    background-color: #cd6858;
+    padding: 10px 20px;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbox-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+    background-color: #cd6858;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.chatbox-img{
+    width: 50px;
+
+}
