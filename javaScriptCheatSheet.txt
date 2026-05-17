@@ -1,0 +1,225 @@
+var declaration:
+let - lets a var be x can be updated and reassigned 
+const - cannot be updated/reassigned a value assigned to a var
+
+data types:
+string : "abc"
+boolean : true|false
+int : 1
+object: name={ key:value}
+array:[a,b,c]
+
+operators:
++= - added to current value
+= - replaces/sets a value
+
+methods:
+
+.getElementById() - gets html element based on id
+.textContext - updates the test of selected  element
+.getElementById().value - get the value of a specific field
+Math.random() - generates a random no between 0 to  0.999999
+Math.floor() - rounds up  the no to closes  int ex 1.99999 -> 1
+
+.addEventListener - method used to specify event, replaces onclick in html ex generateBtn.addEventListener("click", generatePassword);
+addEventListener Methods-> click, dblclick
+
+
+.innerHTML - renders html tags in strings
+Number() - coverts string into numbers/integers. If a non no value is provided the value sets to nan
+
+Local Storage: a limitation of using local storage is that it can only store strings
+localStorage.setItem("Storage_name",Storage_data) - creates are storage by name storage_name and then stores the data into it
+localStorage.getItem("Storage_name") - get the data stored in the storage_name
+localStorage.clear() - clears any stored data
+typeof - prints type of a var
+Json.stringify() - converts a json object in string types 
+Json.parse() - coverts a string or array into json type
+
+setTimeout() - sets timeout before a block of code is run. ex setTimeout(function(){console.log("Hello")}, 1500)
+style - updates the css property of targated html class or id. ex {jsVarForDOM}.style.{CSSProperty}=value ,question.style.backgroundColor = '#68e1fd'
+preventDefault - Prevents the default behavior of a HTML	 event(button click,scroll).
+FormData(formElement) = constructor method used to stores the data passed from form. ex const loginFormData = new FormData(loginForm)
+{formDataVar}.get('KeyName') - used to get specific field from form data. ex loginFormData.get('astronautName')
+{formDataVar}.classList.toggle('newClass')- accesses the class list of an html element and add new classes.
+(arryName)	 - checks if a value is already part of array, returns boolean.
+e.target.id - grabs the id of a event which was interacted with by user.
+.parentElement - gets details about parent tag.
+.classList.add - add new class to a element
+.classList.remove - remove existing class to element
+.getElementsByClassName -grabs all element of same class
+document.querySelector('input[type="radio"]:checked') - selects a html tag similar to getElementById
+.checked - Checks if a radio/checkbox has been selected. Returns boolean.
+.filter()-gets the selected elements from an array. const children= ages.filter(function(age){return age<18})
+.includes()-checks if a value is present in an array and returns a boolean
+template string/literals : a way to write multi-line html code in java script. Can be used by wrapping html code in `. the wrapped text becomes a string and if vars are to be referenced it can be done by ${var}
+
+***************************************************************************************************************************************************************************************
+Object Destructuring: assigning multiple values let/const to all values of an object. ex
+const favouriteFilm = {
+    title: "Top Gun",
+    year: "1986",
+    genre: "action",
+    star: "Tom Cruise",
+    director: "Tony Scott"
+} 
+
+const {title, year, genre, star, director} = favouriteFilm
+
+
+**************************************************************
+map()- Itrrates  through the array and can perform multiple operations. ex
+
+distanceWalkedMilesArr.map(function(distanceMiles, index){
+    return `Month ${index}: ${distanceMiles * conversionFactorMilesToKm}`
+})
+
+above function takes two params for distanceWalkedMilesArr array, distenceMiles- each value of array and index - index of value
+
+map should be used when we need to return a new array
+
+foreach should be used when an array(empty/non-empty) already exists
+
+******************************************************************
+join()- joins two array into a string and you can chose how elements are seprated.
+
+guestsArr.join('.'), guestsArr.join(' ') 
+
+**************************************************************************************************************************************************************************************
+an alternative to innerHTML method:
+document.createElement: contains the html tag element ex let li = document.createElement(li)
+document.setTextContext: contains the value that needs to be  set in html tag ex li.textContext="xyz"
+[var].append: appends the  html tag and value to the variable that is set to document.getElementById
+
+
+[array var].push: pushes a new element at end of an array
+[array var].pop: removes a element  from end of an array
+[array var].shift: removes a element from start of the array
+[array var].unshift: adds element at start of array
+[array]/reduce():Takes in two parameter first if total and second is the current element in array
+
+const totalRainfallJanuary = rainJanuaryByWeek.reduce(function(total, currentElement){
+    console.log('total: ' + total, 'currentElement: ' + currentElement)
+    return total + currentElement
+})
+
+conditional statements:
+if(condition){
+code
+}
+else{
+code
+}
+
+and : &&
+or : ||
+
+loops: 
+
+for (let i =0; i<=(something); i+=1)
+
+for (let x of (ElementToLoopOver))
+
+{array}.forEach(function({var}){
+    console.log({var})
+})
+
+
+statements:
+
+import {(methodName)} from 'path'
+
+
+HTML-----Properties
+
+data-* - used to set a data attribute to a element that can refer to id of another attribute eg: <i class="fa-solid fa-heart" data-heart="image-1"></i>
+
+data-* reference ex
+document.addEventListener('click', function(e) {
+    if (e.target.dataset.heart){
+        console.log(e.target.dataset.heart)
+    }
+	
+	
+Concepts:
+
+function expression: 
+Arrow functions: assigning functions to vars. Conditions are if one parameter no brackets required, if none or more then one parameter then brackets are required
+
+ex:const getSpendAlert = amount => {
+    return `Warning! You just spent £${amount}!`}
+const getSpendAlert = (name, amount) => {
+    return `Warning! Hey ${name}! You just spent ${amount}!`
+} 
+const getSpendAlert = () => {
+    return `Warning! Hey ${name}! You just spent ${amount}!`
+} 
+
+
+*********************************************************************************
+ternary operator: 
+
+const message = exerciseTimeMins < 30 ? 'You need to try harder!' : 'Doing good!'
+const message = exerciseTimeMins < 30 ? 'You need to try harder!' : exerciseTimeMins < 60 ? 'Doing good!' : 'Excellent!'
+
+
+****************************************************************************
+rest parameter: ...{parameter_name}
+
+ex function setPermissionLevel(permissionLevel, ...names): here names can take up as many arguments as it wants and store it in an array which can be ittrate over
+
+******************************************************************************
+spread operator: ... good way of making a copy of an array
+
+ex console.log(...lunchMenu)
+
+const eventMenu = [...lunchMenu, ...dinnerMenu, ...sweetMenu] here we are combining 3 arrays into single array
+
+
+***********************************************************************************
+and and or : && and ||
+************************************************************************************
+Switch statement: when you have multiple  condtions and want to  execute if any one of them is met
+
+    switch(item) {
+        case 'coffee':
+            price = 2
+            break
+        case 'Sandwiches':
+            price = 5
+            break
+        case 'Salad':
+            price = 4
+            break
+        case 'Lemon Cake':
+            price = 3
+            break    
+		default:
+            return `Sorry, we don't sell ${item}`
+    }
+    return `You selected ${item}. That will be $${price}`
+}
+
+console.log(selectItem('coffee'))
+
+*****************************************************************************************
+Date() - is a constructor
+
+const dateSnapshot = new Date()
+
+
+const dateSnapshot = new Date()
+console.log(`Copyright ${dateSnapshot.getFullYear().toString()}`)
+
+*****************************************************************************************
+Constrctors: 
+String()
+Number()
+Array()
+Object()
+Boolean()
+
+const person = new Object()
+person.name = 'Tom'
+console.log(person)
+

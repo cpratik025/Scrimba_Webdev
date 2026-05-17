@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    font-family: "Slackey", sans-serif;
+    background-color: whitesmoke;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.hero{
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    color: white;
+    background-image: url('./img/fresh-tasty-homemade-burger-wooden-table_147620-1307.avif');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h1{
+    margin: 0;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-div{
+    border: 1px black solid;
+    display: flex;
+}
+
+.emoji-div{
+    width: 20%;
+}
+
+.emoji{
+    float: left;
+    font-size: 6em;
+    margin: 0;
+    padding: 10px 0;    
+}
+
+.item-details{
+    width: 70%;
+    margin: 20px;
+}
+.item-name{
+    font-weight: 900;
+    
+}
+
+.item-ingredients{
+    color: grey;
+    font-weight: 400;
+}
+
+
+.add-item{
+    border: 2px grey solid;
+    text-align: center;
+    margin-top:50px;
+    margin-right: 10px;
+    font-size: 2em;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    color:#3C3C3C;
+    background-color: #DEDEDE;
+}
+
+.order-list{
+    text-align: center;
+}
+
+.order-display{
+    display: none;
+}
+
+.order-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order-items p{
+    width: 30%;
+}
+
+.total-display{display: none;}
+
+.total-display p{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    border-top: 1px dotted grey;
+}
