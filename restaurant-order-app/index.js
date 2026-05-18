@@ -24,7 +24,6 @@ function handleAdd(itemsDetails){
 function setOrder(items){
     let orderHTML=''
     const total=items.reduce((sum,item) => sum+item.price,0)
-    console.log(total)
     items.map(function(item){
         if(!document.getElementById('order-items-'+item.id)){
             quantity=1
@@ -41,10 +40,10 @@ function setOrder(items){
             let priceVal=document.getElementById('order-items-price-'+item.id)
             quantityVal.innerText=itemCount
             let totalPrice=itemCount*item.price
-            priceVal.innerHTML=totalPrice
+            priceVal.innerHTML='$'+totalPrice
         }
     })
-    const totalHtml=`<p class='total' id='total-value'>$${total}<p>`
+    const totalHtml=`<p id='total-value'>$${total}</p>`
     const orderList=document.getElementById('order-list')
     const totalOrder=document.getElementById('order-total')
     orderList.innerHTML+=orderHTML
@@ -58,7 +57,8 @@ function setOrder(items){
     
     if (items.length > 0){
         orderList.classList.remove('order-display')
-        totalOrder.classList.remove('total-display')
+        totalOrder.classList.remove('total-hidden')
+        document.getElementById('checkout-div').classList.remove('total-hidden')
     }
     }
 

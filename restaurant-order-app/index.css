@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    font-family: "Slackey", sans-serif;
+    font-family: "Smythe", sans-serif;
+    font-weight: 400;
     background-color: whitesmoke;
     width: 50%;
     margin-left: 25%;
@@ -17,16 +18,18 @@ body{
 }
 
 h1{
-    margin: 0;
+    margin-top: 0;
+    margin-left: 10px;
 }
 
+h2{margin-left: 10px;}
 .items{
     display: flex;
     flex-direction: column;
 }
 
 .item-div{
-    border: 1px black solid;
+    border-bottom: 1px black solid;
     display: flex;
 }
 
@@ -71,6 +74,8 @@ h1{
 
 .order-list{
     text-align: center;
+    font-size: 2em;
+    font-weight: 400;
 }
 
 .order-display{
@@ -87,11 +92,35 @@ h1{
     width: 30%;
 }
 
-.total-display{display: none;}
-
-.total-display p{
-    display: inline-block;
-    width: 45%;
-    text-align: center;
+.total-display{
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
     border-top: 1px dotted grey;
 }
+
+.total-display p{
+    margin-top: 0px;
+    padding: 0 5%;
+    margin-bottom: 5px;
+}
+
+.checkout{
+    text-align: center;
+    margin-top:5px;
+}
+.checkout-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between the SVG and the text */
+    padding: 10px 16px;
+    cursor: pointer;
+    background-color: lightgreen;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+    
+
+.total-hidden{display: none;}
+
+.form-container{display: none;}
